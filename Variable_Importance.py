@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 22 10:34:04 2019
-
-@author: Abtin
-"""
 
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
