@@ -26,7 +26,7 @@ In the model training stage, not all the variables are useful. Considering some 
 Based on this criterion, the most important variable is Corrected fan speed (NRF). The least important variable is Demanded fan speed. Comparing obtained results with other sources shows that we were able to correctly calculate the HI for each row of data and then find the importance of each variable based on its effect on HI value, using RFs algorithm. These variables are shown in the following table. The observed difference in the order of variables importance can be caused by different settings used for RFs algorithm.
 
 <p align="center">
-    <img src="Doc_Files/table 3.png"></br>
+    <img src="Doc_Files/table 3.PNG"></br>
 </p>
 
 Next figure shows the health indices of 249 training aircraft engines. These health indices were transformed from the original data using the T-matrix transformation. Large variations in the health indices were observed at the beginning of the degradation processes of the training units when the original 21 variables were used to compute HI. In addition, sudden decreases in the health indices were observed at the end of the degradation processes of the training units. However, the variations in the health indices should be respectively small because the C-MAPSS tool models a gradual degradation process due to wear. These observations indicate that some redundant variables might be used for computing the health indices.
@@ -46,11 +46,11 @@ The calculated values for baselines (calculated with different aggregation primi
 
 * Prediction error values of baselines calculated with [Min, Max, Last] aggregation primitives
 <p align="center">
-    <img src="Doc_Files/table 4.png"></br>
+    <img src="Doc_Files/table 4.PNG"></br>
 </p>
 
 * Prediction error values of baselines calculated with [Min, Max, Last, Mean, Std] aggregation primitives
 <p align="center">
-    <img src="Doc_Files/table 5.png"></br>
+    <img src="Doc_Files/table 5.PNG"></br>
 </p>
 
