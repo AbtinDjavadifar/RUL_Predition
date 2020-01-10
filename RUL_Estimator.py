@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 14 17:41:37 2019
 
-@author: Abtin
-"""
 import numpy as np
 import pandas as pd
 import featuretools as ft
