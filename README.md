@@ -20,7 +20,7 @@ One of the main factors for success of data-driven approaches is availability of
 In the model training stage, not all the variables are useful. Considering some variables may even reduce prediction accuracy because these variables may not be correlated to the degradation behavior of aircraft engines. To select the most effective variables, RFs were used to measure the importance of measurement variables with respect to their performance on prediction accuracy. The importance of variables is shown in a bar chart:
 
 <p align="center">
-    <img src="Aircraft_Engine_RUL_Predition/Doc_Files/Variable Importance Diagram.png" width=600></br>
+    <img src="Doc_Files/Variable Importance Diagram.png" width=600></br>
 </p>
 
 Based on this criterion, the most important variable is Corrected fan speed (NRF). The least important variable is Demanded fan speed. Comparing obtained results with other sources shows that we were able to correctly calculate the HI for each row of data and then find the importance of each variable based on its effect on HI value, using RFs algorithm. These variables are shown in Table 3. The observed difference in the order of variables importance can be caused by different settings used for RFs algorithm.
