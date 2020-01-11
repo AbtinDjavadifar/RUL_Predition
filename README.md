@@ -102,3 +102,10 @@ Here is some suggestion for improving the results in future works:
 4. Using Recursive Feature Elimination along with Random Forest Regression module to assign scores to created feature and selecting the features with higher impacts.
 5. Using Gaussian Process or other techniques to tune hyperparameters (like number of estimators or maximum of features for Random Forest regression).
 6. Employing an ensemble of various machine learning algorithms to find the optimum combination of different base learners and assigning appropriate weights to each of them.
+
+## References
+
+Breiman, L. (2001). "Random forests." Mach.Learning, 45(1), 5-32.
+Hu, C., Youn, B. D., Wang, P., and Yoon, J. T. (2012). "Ensemble of data-driven prognostic algorithms for robust prediction of remaining useful life." Reliab.Eng.Syst.Saf., 103 120-135.
+Li, Z., Goebel, K., and Wu, D. (2019). "Degradation Modeling and Remaining Useful Life Prediction of Aircraft Engines Using Ensemble Learning." Journal of Engineering for Gas Turbines and Power, 141(4), 041008.
+Saxena, A., Goebel, K., Simon, D., and Eklund, N. (2008). "Damage propagation modeling for aircraft engine run-to-failure simulation." 2008 international conference on prognostics and health management, IEEE, 1-9.
