@@ -54,3 +54,51 @@ The calculated values for baselines (calculated with different aggregation primi
     <img src="Doc_Files/table 5.PNG"></br>
 </p>
 
+It can be seen that using more aggregation primitives leads to a slight enhancement of detection accuracy. A comparison between results shows that number of variables did not have a great impact on performance. The minimum prediction error in each column is shown with green color. These values can be used as criteria for evaluating the performance of machine learning algorithms in next section.
+
+### RUL prediction
+
+The RUL prediction was conducted in different condition to evaluate the effect of each parameter on performance. All the techniques have been applied once on the whole data set and another time on the limited data set including only 7 more important variables.
+From the feature engineering point of view, 2 different set of aggregation primitives were evaluated:
+1) Min, Max, Last
+2) Min, Max, Last, Mean, Std
+These are just two samples from hundreds possible combination of primitives to see the effect of different features on prediction.
+In each case, MAE, RMSE, and RE metrics were used to measure the prediction accuracy.
+
+Finally, following machine learning approaches were applied to find the best fit to this project.
+1) Random Forests (RFs)
+2) Support Vector Regression (SVR)
+3) Classification and Regression Tree (CART)
+4) Multi Layer Perceptron (MLP)
+The results are shown in the following tables (calculated with different aggregation primitives).
+
+* Prediction error values of base learners calculated with [Min, Max, Last] aggregation primitives
+<p align="center">
+    <img src="Doc_Files/table 6.PNG"></br>
+</p>
+
+* Prediction error values of base learners calculated with [Min, Max, Last, Mean, Std] aggregation primitives
+<p align="center">
+    <img src="Doc_Files/table 7.PNG"></br>
+</p>
+
+At first glance, it can be seen that Random Forests algorithms is performing considerably better than other base learners. However, CART and MLP usually achieve less relative error.
+All the calculations for this section can be found in “RUL_Estimator.py” manuscript.
+
+## Conclusion
+
+While working on engine run-to-failure data set, one of the major steps is creating a pipeline which handles the time series. For this purpose, it is needed to truncate each of time series and consider the remaining number of cycles as its remaining useful life. As a result, the sensor measurements will not have the same shape and size after truncation. Here is when feature engineering comes to the scene and helps to create new features from available data in each sub-set of data. However, creating useful features is another challenge that needs human expertise or huge amount of calculation, trying to find it by trail and error. In this project, 2 different set of aggregation primitives were used for feature creation. The result shows that blindly adding extra features does not lead to better performance in prediction. So, it is important to evaluate the impact of each newly generated feature before adding it to the data. This can be done by using the Complexity time series primitive to create more advanced features or using Recursive Feature Elimination along with Random Forest Regression module to assign scores to created features.
+Different number of base variables (7 & 21) were also used for prediction. Although the preliminary results showed that using only 7 more important variables leads to less amount of variation in health indices, in practice, employing this smaller data set did not enhance the accuracy. But it is noteworthy that using smaller data sets decreases the volume of calculation and optimizes the prediction process. 
+Using 3 different metrics for error shows different aspects of prediction accuracy. It is interesting that RFs are performing well based on the Root Mean Square Error metric, but considering the Relative Error, MLP and CART are greatly performing better than RFs. It should be noted that underestimating the RUL is preferable to overestimating it as it does not lead to failure of the engine and just stops it earlier.
+4 different machine learning algorithms has been used for prediction of RUL. Obtained results show that most of the algorithms are working better than baselines which proves they are making an improvement in prediction. It can be seen that RFs have a better performance compared to others. In the next degree, CART and SVR are doing well, specifically while using more aggregation primitives. The parameter settings of each algorithm have been selected based on experience or by trial and error. However, using more advanced techniques for tuning these parameters can lead to better results in future.
+By having the data pipeline ready now, more machine learning algorithms can be taken into account in next steps. Also, using an ensemble of these algorithms can be another important step toward improving the prediction by combining the advantages of different base learners.
+
+## Future work
+
+Here is some suggestion for improving the results in future works:
+1. Creating different sets of cut off times and using them for cross validation to find the best set.
+2. Using K-Means clustering technique and make new entities from clusters by grouping the engines with similar operational settings.
+3. using the Complexity time series primitive to create more advanced features from data series.
+4. Using Recursive Feature Elimination along with Random Forest Regression module to assign scores to created feature and selecting the features with higher impacts.
+5. Using Gaussian Process or other techniques to tune hyperparameters (like number of estimators or maximum of features for Random Forest regression).
+6. Employing an ensemble of various machine learning algorithms to find the optimum combination of different base learners and assigning appropriate weights to each of them.
