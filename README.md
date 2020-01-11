@@ -41,7 +41,7 @@ In the next step, only 7 more important parameters were considered, and other se
     <img src="Doc_Files/HIs - 7 variables.png"></br>
 </p>
 
-###Machine Learning Baselines
+### Machine Learning Baselines
 The calculated values for baselines (calculated with different aggregation primitives) are shown in following tables.
 
 * Prediction error values of baselines calculated with [Min, Max, Last] aggregation primitives
@@ -105,7 +105,7 @@ Here is some suggestion for improving the results in future works:
 
 ## References
 
-Breiman, L. (2001). "Random forests." Mach.Learning, 45(1), 5-32.
-Hu, C., Youn, B. D., Wang, P., and Yoon, J. T. (2012). "Ensemble of data-driven prognostic algorithms for robust prediction of remaining useful life." Reliab.Eng.Syst.Saf., 103 120-135.
-Li, Z., Goebel, K., and Wu, D. (2019). "Degradation Modeling and Remaining Useful Life Prediction of Aircraft Engines Using Ensemble Learning." Journal of Engineering for Gas Turbines and Power, 141(4), 041008.
-Saxena, A., Goebel, K., Simon, D., and Eklund, N. (2008). "Damage propagation modeling for aircraft engine run-to-failure simulation." 2008 international conference on prognostics and health management, IEEE, 1-9.
+1. Breiman, L. (2001). "Random forests." Mach.Learning, 45(1), 5-32.
+2. Hu, C., Youn, B. D., Wang, P., and Yoon, J. T. (2012). "Ensemble of data-driven prognostic algorithms for robust prediction of remaining useful life." Reliab.Eng.Syst.Saf., 103 120-135.
+3. Li, Z., Goebel, K., and Wu, D. (2019). "Degradation Modeling and Remaining Useful Life Prediction of Aircraft Engines Using Ensemble Learning." Journal of Engineering for Gas Turbines and Power, 141(4), 041008.
+4. Saxena, A., Goebel, K., Simon, D., and Eklund, N. (2008). "Damage propagation modeling for aircraft engine run-to-failure simulation." 2008 international conference on prognostics and health management, IEEE, 1-9.
